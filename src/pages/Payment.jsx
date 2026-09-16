@@ -109,8 +109,8 @@ const Payment = ({ isOpen, onClose }) => {
             <div className="border-b border-[#e7e1f2] bg-white/90 px-6 py-5 backdrop-blur-xl sm:px-9">
               <div className="flex items-start justify-between gap-6">
                 <div className="flex flex-col items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f0ebff] text-[#7658c9]">
-                    <Wallet size={20} />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f0ebff] text-[#7658c9]">
+                    <Wallet size={18} />
                   </div>
 
                   <div>
@@ -129,7 +129,7 @@ const Payment = ({ isOpen, onClose }) => {
                       </span>
                     </h2>
 
-                    <p className="mt-3 max-w-xl text-sm leading-6 text-[#776d82]">
+                    <p className="mt-3 text-sm leading-4 text-[#776d82]">
                       Select your preferred cryptocurrency and send your
                       payment to the corresponding wallet address.
                     </p>
