@@ -129,7 +129,7 @@ const Payment = ({ isOpen, onClose }) => {
                       </span>
                     </h2>
 
-                    <p className="mt-3 text-sm leading-4 text-[#776d82]">
+                    <p className="mt-3 text-sm leading-5 w-full text-[#776d82]">
                       Select your preferred cryptocurrency and send your
                       payment to the corresponding wallet address.
                     </p>
