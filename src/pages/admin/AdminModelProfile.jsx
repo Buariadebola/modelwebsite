@@ -474,16 +474,6 @@ export default function AdminModelProfile() {
                 )}
               />
 
-              <Stat
-                label="Followers"
-                value={currentModel.followersCount}
-              />
-
-              <Stat
-                label="Following"
-                value={currentModel.followingCount}
-              />
-
             </div>
 
             {/* Bio */}
