@@ -107,7 +107,7 @@ const Payment = ({ isOpen, onClose }) => {
             {/* ================================================= */}
 
             <div className="border-b border-[#e7e1f2] bg-white/90 px-6 py-5 backdrop-blur-xl sm:px-9">
-              <div className="flex items-start justify-between gap-6">
+              <div className="relative flex items-start justify-between gap-6">
                 <div className="flex flex-col items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#f0ebff] text-[#7658c9]">
                     <Wallet size={18} />
@@ -140,7 +140,7 @@ const Payment = ({ isOpen, onClose }) => {
                   type="button"
                   onClick={closePayment}
                   aria-label="Close payment"
-                  className="group flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#e5def2] bg-[#faf9ff] text-[#6e6081] transition-all duration-300 hover:border-[#bca9e8] hover:bg-[#f2edff] hover:text-[#7658c9]"
+                  className="group absolute top-2 right-2 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#e5def2] bg-[#faf9ff] text-[#6e6081] transition-all duration-300 hover:border-[#bca9e8] hover:bg-[#f2edff] hover:text-[#7658c9]"
                 >
                   <X
                     size={17}
