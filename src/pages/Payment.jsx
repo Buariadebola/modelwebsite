@@ -122,7 +122,7 @@ const Payment = ({ isOpen, onClose }) => {
                       </span>
                     </div>
 
-                    <h2 className="mt-3 flex flex-col gap-1 text-3xl font-semibold tracking-[-0.045em] text-[#2c233d] sm:text-4xl">
+                    <h2 className="mt-3 gap-1 text-2xl font-semibold tracking-[-0.045em] text-[#2c233d] sm:text-4xl">
                       Cryptocurrency
                       <span className="ml-2 font-serif font-light italic text-[#8065bc]">
                         payment
