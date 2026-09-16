@@ -277,12 +277,8 @@ export default function AdminModelProfile() {
 
           <div className="flex items-center gap-4">
 
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#7658c9] text-sm font-bold text-white">
-              A
-            </div>
-
-            <div className="hidden sm:block">
-              <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#9b93a3]">
+            <div>
+              <p className="text-[9px] hidden sm:block font-semibold uppercase tracking-[0.2em] text-[#9b93a3]">
                 Studio
               </p>
 
