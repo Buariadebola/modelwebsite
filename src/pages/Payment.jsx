@@ -108,7 +108,7 @@ const Payment = ({ isOpen, onClose }) => {
 
             <div className="border-b border-[#e7e1f2] bg-white/90 px-6 py-5 backdrop-blur-xl sm:px-9">
               <div className="flex items-start justify-between gap-6">
-                <div className="flex items-start gap-4">
+                <div className="flex flex-col items-start gap-4">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f0ebff] text-[#7658c9]">
                     <Wallet size={20} />
                   </div>
@@ -122,7 +122,7 @@ const Payment = ({ isOpen, onClose }) => {
                       </span>
                     </div>
 
-                    <h2 className="mt-3 text-3xl font-semibold tracking-[-0.045em] text-[#2c233d] sm:text-4xl">
+                    <h2 className="mt-3 flex flex-col gap-1 text-3xl font-semibold tracking-[-0.045em] text-[#2c233d] sm:text-4xl">
                       Cryptocurrency
                       <span className="ml-2 font-serif font-light italic text-[#8065bc]">
                         payment
