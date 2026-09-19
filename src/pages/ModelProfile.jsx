@@ -426,7 +426,7 @@ export default function ModelProfile() {
                     }}
                     className="flex flex-1 items-center justify-center gap-3 rounded-xl border border-[#dcd3ef] bg-white px-6 py-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#6e559e] transition hover:border-[#b9a7e9] hover:bg-[#f8f5ff]"
                   >
-                    Book / Payment
+                    Payment
                   </button>
 
                 </div>
