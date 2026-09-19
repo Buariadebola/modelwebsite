@@ -159,7 +159,7 @@ export default function AdminMessages() {
     <main className="h-screen overflow-hidden bg-[#f7f4fc]">
 
       <section className="relative mx-auto flex h-full w-full overflow-hidden bg-white">
-        <button onClick={handleSidebar} className="absolute p-2 top-1 right-1 bg-purple-500/40 rounded-sm text-purple-600"><MenuIcon size={16} /></button>
+        <button onClick={handleSidebar} className="absolute hidden not-sm:block sm:hidden p-2 top-1 right-1 bg-purple-500/40 rounded-sm text-purple-600"><MenuIcon size={16} /></button>
 
         {/* DESKTOP SIDEBAR */}
         <aside className="hidden w-[320px] shrink-0 border-r border-[#e6e0ec] bg-white lg:flex lg:hidden lg:flex-col xl:w-[360px]">
@@ -185,7 +185,7 @@ export default function AdminMessages() {
         
         {/* MOBILE SIDEBAR */}
         {showSidebar && (
-          <aside className="hidden w-[320px] shrink-0 border-r border-[#e6e0ec] bg-white lg:flex lg:flex-col not-sm:block sm:hidden xl:w-[360px]">
+          <aside className="hidden absolute left-0 top-0 h-screen w-[320px] shrink-0 border-r border-[#e6e0ec] bg-white lg:flex lg:flex-col not-sm:block sm:hidden xl:w-[360px]">
             <ConversationList
               conversations={
                 conversations
