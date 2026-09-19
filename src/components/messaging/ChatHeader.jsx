@@ -79,7 +79,7 @@ export default function ChatHeader({
         <button
           type="button"
           onClick={logout}
-          className="flex h-9 w-9 items-center justify-center rounded-full text-[#8b8295] transition hover:bg-[#f5effc] hover:text-[#7658c9]"
+          className="flex h-9 w-9 items-center justify-center rounded-full text-[#8b8295] transition hover:bg-[#f5effc] not-sm:mr-3 hover:text-[#7658c9]"
           aria-label="Logout"
         >
           <LogOut size={17} />

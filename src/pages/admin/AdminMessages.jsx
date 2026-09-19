@@ -1,6 +1,6 @@
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { ArrowLeft, Loader2 } from "lucide-react";
+import { Loader2, MenuIcon } from "lucide-react";
 
 import ChatHeader from "../../components/messaging/ChatHeader";
 import ChatWindow from "../../components/messaging/ChatWindow";
@@ -11,6 +11,8 @@ import { useAuth } from "../../context/AuthContext";
 import { useMessaging } from "../../hooks/useMessaging";
 
 export default function AdminMessages() {
+
+  const [showSidebar, setShowSidebar] = useState(false);
   const {
     user,
     isAuthenticated,
@@ -50,6 +52,10 @@ export default function AdminMessages() {
     user?.type,
     selectConversation,
   ]);
+
+  const handleSidebar = () => {
+    setShowSidebar(!showSidebar)
+  } 
 
   const selectedConversation = useMemo(
     () =>
@@ -152,10 +158,11 @@ export default function AdminMessages() {
   return (
     <main className="h-screen overflow-hidden bg-[#f7f4fc]">
 
-      <section className="mx-auto flex h-full w-full overflow-hidden bg-white">
+      <section className="relative mx-auto flex h-full w-full overflow-hidden bg-white">
+        <button onClick={handleSidebar} className="absolute p-2 top-1 right-1 bg-purple-500/40 rounded-sm text-purple-600"><MenuIcon size={16} /></button>
 
         {/* DESKTOP SIDEBAR */}
-        <aside className="hidden w-[320px] shrink-0 border-r border-[#e6e0ec] bg-white lg:flex lg:flex-col xl:w-[360px]">
+        <aside className="hidden w-[320px] shrink-0 border-r border-[#e6e0ec] bg-white lg:flex lg:hidden lg:flex-col xl:w-[360px]">
           <ConversationList
             conversations={
               conversations
@@ -175,6 +182,31 @@ export default function AdminMessages() {
             isModelView
           />
         </aside>
+        
+        {/* MOBILE SIDEBAR */}
+        {showSidebar && (
+          <aside className="hidden w-[320px] shrink-0 border-r border-[#e6e0ec] bg-white lg:flex lg:flex-col not-sm:block sm:hidden xl:w-[360px]">
+            <ConversationList
+              conversations={
+                conversations
+              }
+              activeConversationId={
+                activeConversationId
+              }
+              onSelect={
+                selectConversation
+              }
+              unreadCounts={
+                unreadCounts
+              }
+              onlineUsers={
+                onlineUsers
+              }
+              isModelView
+            />
+          </aside>
+        )}
+        
 
         {/* CHAT */}
         <div
